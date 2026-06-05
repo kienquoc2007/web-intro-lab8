@@ -1,0 +1,194 @@
+# web-intro-lab8
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Phân Tích URL</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f4f6f9;
+            margin:0;
+            padding:20px;
+            line-height:1.6;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            color:#0066cc;
+        }
+
+        h2{
+            color:#009688;
+        }
+
+        .url-box{
+            background:#eef7ff;
+            border-left:5px solid #0066cc;
+            padding:15px;
+            margin:15px 0;
+            font-size:18px;
+            word-wrap:break-word;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
+        }
+
+        table, th, td{
+            border:1px solid #ccc;
+        }
+
+        th{
+            background:#0066cc;
+            color:white;
+        }
+
+        th, td{
+            padding:12px;
+        }
+
+        ul li{
+            margin-bottom:8px;
+        }
+
+        .note{
+            margin-top:20px;
+            background:#fff3cd;
+            padding:15px;
+            border-left:5px solid orange;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:25px;
+            color:#666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>PHÂN TÍCH CẤU TRÚC URL</h1>
+
+    <p>
+        URL (Uniform Resource Locator) là địa chỉ dùng để xác định vị trí
+        của một tài nguyên trên Internet. Mỗi URL được cấu tạo từ nhiều
+        thành phần khác nhau, giúp trình duyệt tìm đúng tài nguyên mà
+        người dùng yêu cầu.
+    </p>
+
+    <h2>URL Mẫu</h2>
+
+    <div class="url-box">
+        https://example.com/products/list?page=2#top
+    </div>
+
+    <h2>Các Thành Phần Chính</h2>
+
+    <ul>
+        <li><strong>Protocol:</strong> https</li>
+        <li><strong>Domain:</strong> example.com</li>
+        <li><strong>Path:</strong> /products/list</li>
+        <li><strong>Query:</strong> ?page=2</li>
+        <li><strong>Fragment:</strong> #top</li>
+    </ul>
+
+    <h2>Bảng Phân Tích Chi Tiết</h2>
+
+    <table>
+        <tr>
+            <th>Thành phần</th>
+            <th>Giá trị</th>
+            <th>Mô tả</th>
+        </tr>
+
+        <tr>
+            <td>Protocol</td>
+            <td>https</td>
+            <td>
+                Giao thức truyền dữ liệu an toàn giữa trình duyệt và máy chủ.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Domain</td>
+            <td>example.com</td>
+            <td>
+                Tên miền của website giúp xác định máy chủ cần truy cập.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Path</td>
+            <td>/products/list</td>
+            <td>
+                Đường dẫn đến trang hoặc tài nguyên cụ thể trên website.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Query</td>
+            <td>?page=2</td>
+            <td>
+                Tham số gửi tới máy chủ, cho biết người dùng muốn xem trang số 2.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Fragment</td>
+            <td>#top</td>
+            <td>
+                Xác định vị trí bên trong trang sau khi nội dung được tải.
+            </td>
+        </tr>
+    </table>
+
+    <h2>Giải Thích Hoạt Động</h2>
+
+    <p>
+        Khi người dùng nhập URL vào trình duyệt, hệ thống sẽ đọc giao thức
+        HTTPS để thiết lập kết nối bảo mật. Sau đó trình duyệt tìm máy chủ
+        tương ứng với tên miền <strong>example.com</strong>.
+    </p>
+
+    <p>
+        Tiếp theo, trình duyệt yêu cầu tài nguyên tại đường dẫn
+        <strong>/products/list</strong>. Tham số
+        <strong>page=2</strong> được gửi kèm để yêu cầu hiển thị trang thứ hai
+        của danh sách sản phẩm.
+    </p>
+
+    <p>
+        Sau khi nội dung được tải xong, trình duyệt sẽ di chuyển đến vị trí
+        được đánh dấu bởi <strong>#top</strong> trong trang web.
+    </p>
+
+    <div class="note">
+        <strong>Lưu ý:</strong>
+        Query String và Fragment là các thành phần tùy chọn. Một URL vẫn có
+        thể hoạt động chỉ với Protocol, Domain và Path.
+    </div>
+
+    <footer>
+        Bài thực hành HTML - Phân tích cấu trúc URL
+    </footer>
+
+</div>
+
+</body>
+</html>
